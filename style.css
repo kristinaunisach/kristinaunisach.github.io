@@ -1,83 +1,88 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #e8f5e9;
-  padding: 20px;
-  text-align: center;
-  position: relative;
+    font-family: Arial, sans-serif;
+    background: #deffc4; /* kräftigeres Grün */
+    padding: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .main-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .left-panel, .right-panel {
+    width: 50%;
+    padding: 40px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    font-size: 1.1em;
+  }
+  
+  .buttons button, .icon-buttons button {
+    padding: 15px 20px;
+    margin: 5px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background: #52aa3e;
+    color: white;
+    font-size: 1.2em;
+    transition: 0.2s;
+  }
+  
+  .buttons button.selected, .icon-buttons button.selected {
+    background: #32631b; 
+  }
+  
+  .buttons button:hover, .icon-buttons button:hover {
+    transform: scale(1.05);
+  }
+  #calculateBtn {
+    font-size: 1.5em;       /* Schriftgröße */
+    padding: 20px 30px;     /* Innenabstand */
+    border-radius: 15px;    /* Rundungen */
+    background-color: #eb9743; /* eigene Farbe */
+    color: white;
+    transition: 0.2s;
 }
 
-.language-selector {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 1em;
+#calculateBtn:hover {
+    background-color: #b05f30; /* Hover-Farbe */
+    transform: scale(1.05);
 }
 
-.main-container {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  align-items: flex-start;
+#calculateBtn.selected {
+    background-color: #662e11; /* Ausgewählt */
 }
 
-.left-panel, .right-panel {
-  width: 45%;
-}
-
-.buttons button, .icon-buttons button {
-  padding: 15px 20px;
-  margin: 5px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  background: #66bb6a;
-  color: white;
-  font-size: 1.3em;
-}
-
-#result, #personalPanel, #personalResult {
-  margin-top: 15px;
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  font-size: 1.1em;
-  text-align: left;
-}
-
-.earth {
-  font-size: 50px;
-  display: inline-block;
-  animation: float 2s infinite ease-in-out;
-}
-
-label {
-  display: block;
-  margin: 8px 0;
-  font-size: 1.05em;
-}
-
-input[type="range"] {
-  width: 70%;
-  margin: 5px 10px;
-}
-
-/* Tick marks */
-input[type="range"]::-webkit-slider-runnable-track { height:8px; }
-input[type="range"]::-webkit-slider-thumb { height:20px; width:20px; margin-top:-6px; }
-
-#legend {
-  margin-top: 20px;
-  font-size: 1em;
-}
-
-.icon-buttons button {
-  font-size: 2em;
-}
-
-.hidden { display: none; }
-
-@keyframes float {
-  50% { transform: translateY(-15px); }
-}
-
-
+  #result, #personalPanel, #personalResult, #countryExplanation, #earthVulcanExplanation {
+    margin-top: 15px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    line-height: 1.6;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+  
+  .earth {
+    font-size: 55px;
+    display: inline-block;
+    animation: float 2s infinite ease-in-out;
+  }
+  
+  @keyframes float { 50% { transform: translateY(-15px); } }
+  
+  label { display: block; margin: 10px 0; font-size: 1.05em; }
+  input[type="range"], select { width: 75%; margin: 5px 10px; font-size: 1em; }
+  input[type="range"]::-webkit-slider-runnable-track { height: 8px; background: #a5d6a7; border-radius: 5px; }
+  input[type="range"]::-webkit-slider-thumb { height: 20px; width: 20px; margin-top: -6px; background: #388e3c; border-radius: 50%; cursor: pointer; transition: 0.2s; }
+  input[type="range"]::-webkit-slider-thumb:hover { background: #2e7d32; }
+  select { border-radius: 6px; border: 1px solid #aaa; padding: 4px 8px; background-color: #f4f6f8; cursor: pointer; }
+  
+  .icon-buttons button { font-size: 1.4em; }
+  #legend { margin-top: 20px; line-height: 1.5; }
+  
