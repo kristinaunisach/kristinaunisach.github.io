@@ -113,7 +113,8 @@ function renderEarths(value){
 function calculatePersonal(){
   const shower=parseFloat(document.getElementById("shower").value);
   const bath=parseFloat(document.getElementById("bath").value);
-  const taps=parseFloat(document.getElementById("taps").value);
+  const tapsRaw=parseFloat(document.getElementById("taps").value);
+  const taps=4-tapsRaw;
   const wasteRaw=parseFloat(document.getElementById("waste").value);
   const waste=4-wasteRaw;
   const consumption=parseFloat(document.getElementById("consumption").value);
