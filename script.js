@@ -117,9 +117,10 @@ function calculatePersonal(){
   const taps=4-tapsRaw;
   const wasteRaw=parseFloat(document.getElementById("waste").value);
   const waste=4-wasteRaw;
-  const consumption=parseFloat(document.getElementById("consumption").value);
-  const reuse=parseFloat(document.getElementById("reuse").value);
-
+  const consumptionRaw=parseFloat(document.getElementById("consumption").value);
+  const consumption=4-consumptionRaw;
+  const reuseRaw=parseFloat(document.getElementById("reuse").value);
+  const reuse=4-reuseRaw; 
   const electricityEarths=(personalElectricity+personalHeating)/3*1.5;
   const waterEarths=(shower+bath+taps+bathsWeekly*0.3)/4*1.2;
   const recyclingEarths=(waste+consumption+reuse)/3*1.3;
