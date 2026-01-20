@@ -115,6 +115,7 @@ function calculatePersonal(){
   const bath=parseFloat(document.getElementById("bath").value);
   const taps=parseFloat(document.getElementById("taps").value);
   const waste=parseFloat(document.getElementById("waste").value);
+  const waste=4-wasteRaw;
   const consumption=parseFloat(document.getElementById("consumption").value);
   const reuse=parseFloat(document.getElementById("reuse").value);
 
